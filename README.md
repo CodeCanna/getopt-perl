@@ -1,4 +1,4 @@
-# getopts-perl
+# getopt-perl
 
 This is a very simple example of `Getopt::Long` in Perl 5.
 
