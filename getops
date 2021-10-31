@@ -1,0 +1,35 @@
+#!/usr/bin/env perl
+use Getopt::Long;
+
+my $verbose;
+my $first_name;
+my $last_name;
+my $age;
+my $phone_number;
+
+GetOptions(
+    'verbose!' => \$verbose,
+    'help|h' => sub {
+        print "Here is your help message!";
+    },
+    'fname=s' => \$first_name,
+    'lname=s' => \$last_name,
+    'age=i' => \$age,
+    'phone=s' => \$phone_number
+);
+
+# Verbose output
+print (
+    "New user created\n",
+    "First Name: $first_name\n",
+    "Last Name:  $last_name\n",
+    "Age:        $age\n",
+    "Phone Number: $phone_number\n"
+) if ($verbose == 1);
+
+# Normal output
+print (
+    "New user created\n",
+    "Name: $first_name $last_name\n",
+    "Age:  $age\n"
+) if ($verbose == 0);
